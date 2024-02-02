@@ -1,0 +1,14 @@
+{{ form_start(form) }}
+
+    <link href="/assets/css/form.css" rel="stylesheet">
+    {{ form_widget(form._token) }}
+
+    <div class="form-container">
+        <div class="heading">Catégorie</div>
+        <form class="form">
+            {{ form_widget(form.name, {'attr': {'class': 'input', 'required' : '', 'type' : 'text', 'name' : 'name', 'id' : 'name', 'placeholder' : 'name'}}) }}
+            <button type="submit" class="login-button">Enregistrer</button>
+        </form>
+    </div>
+
+{{ form_end(form) }}

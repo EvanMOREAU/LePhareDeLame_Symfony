@@ -1,0 +1,183 @@
+.form-container {
+  max-width: 4000px;
+  background: #707070;
+  background: linear-gradient(
+    0deg,
+    rgb(44, 44, 44) 0%,
+    rgb(44, 44, 44) 100%
+  );
+  border-radius: 40px;
+  padding: 25px 35px;
+  border: 5px solid rgb(255, 255, 255);
+  margin: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.input {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  border-inline: 2px solid transparent;
+}
+
+.input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.input::placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.input:focus {
+  outline: none;
+  border-inline: 2px solid #12b1d1;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.forgot-password a {
+  font-size: 11px;
+  color: #0099ff;
+  text-decoration: none;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgb(16, 137, 211) 0%,
+    rgb(18, 177, 209) 100%
+  );
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-link {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgb(16, 137, 211) 0%,
+    rgb(18, 177, 209) 100%
+  );
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+  text-align: center; /* Ajout de la propriété pour centrer le texte */
+}
+
+.remove-link {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgb(255, 51, 0) 0%,
+    rgb(221, 99, 0) 100%
+  );
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+  text-align: center; /* Ajout de la propriété pour centrer le texte */
+}
+
+
+.login-button:hover {
+  transform: scale(1.03);
+}
+
+.login-button:active {
+  transform: scale(0.95);
+}
+
+.social-account-container {
+  margin-top: 25px;
+}
+
+.social-account-container .title {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: rgb(170, 170, 170);
+}
+
+.social-account-container .social-accounts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.social-account-container .social-accounts .social-button {
+  background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+  border: 5px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-account-container .social-accounts .social-button .svg {
+  fill: white;
+  margin: auto;
+}
+
+.social-account-container .social-accounts .social-button:hover {
+  transform: scale(1.2);
+}
+
+.social-account-container .social-accounts .social-button:active {
+  transform: scale(0.9);
+}
+
+.agreement {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.agreement a {
+  text-decoration: none;
+  color: #0099ff;
+  font-size: 9px;
+}
+
+.center-container {
+  text-align: center; /* Centrer le texte à l'intérieur du conteneur si nécessaire */
+}

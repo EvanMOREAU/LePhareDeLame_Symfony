@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Category index{% endblock %}
+
+{% block body %}
+    <link href="/assets/css/form.css" rel="stylesheet">
+<br><br><br><br>
+    <div class="form-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for category in categories %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.name }}</td>
+                    <td>
+                        <a href="{{ path('app_category_show', {'id': category.id}) }}">show</a>
+                        <a href="{{ path('app_category_edit', {'id': category.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a class="page-link" href="{{ path('app_category_new') }}">Créer une nouvelle catégorie</a>
+    </div>
+<br>
+{% endblock %}

@@ -1,23 +1,45 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Register{% endblock %}
-
 {% block body %}
     {% for flash_error in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
-
-    <h1>Register</h1>
-
+    <link href="/assets/css/login.css" rel="stylesheet">
     {{ form_errors(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
+        <div class="container">
+
+                <form action="{{ path('app_login') }}" class="form-control" method="post">
+                    {{ form_start(registrationForm) }}
+                    <p class="title">S'enregistrer</p>
+                    <div class="input-field">
+                        {{ form_widget(registrationForm.email, {'attr': {'class': 'input', 'type' : 'text', 'name' : '_username', 'id' : 'registration_username', 'placeholder' : 'Email'}}) }}
+                    </div>
+                    <div class="input-field">
+                        {{ form_widget(registrationForm.firstName, {'attr': {'class': 'input', 'type' : 'text', 'name' : 'email', 'id' : 'name', 'placeholder' : 'Prénom'}}) }}
+                    </div>
+                    <div class="input-field">
+                        {{ form_widget(registrationForm.lastName, {'attr': {'class': 'input', 'type' : 'text', 'name' : 'email', 'id' : 'name', 'placeholder' : 'Nom'}}) }}
+                    </div>
+                    <div class="input-field">
+                        {{ form_widget(registrationForm.phoneNumber, {'attr': {'class': 'input', 'type' : 'text', 'name' : 'email', 'id' : 'name', 'placeholder' : 'Numéro de téléphone'}}) }}
+                    </div>
+                    <div class="input-field">
+                        {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'input', 'type' : 'text', 'name' : 'email', 'id' : 'name', 'placeholder' : 'Mot de passe'}}) }}
+                    </div>
+                    {{ form_row(registrationForm.agreeTerms) }}
+                    <a>Forgot your password?</a>
+                    <button class="submit-btn">Connexion</button>
+                    {{ form_end(registrationForm) }}
+                </form>
+        </div>
+
+
+
+    {# {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+    {{ form_end(registrationForm) }} #}
 {% endblock %}

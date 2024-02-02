@@ -1,0 +1,31 @@
+{{ form_start(form, {'attr': {'enctype': 'multipart/form-data'}}) }}
+        <link href="/assets/css/form.css" rel="stylesheet">
+    {{ form_widget(form._token) }}
+
+    <div class="form-container">
+        <div class="heading">Services</div>
+        <form class="form">
+            {{ form_widget(form.Name, {'attr': {'class': 'input', 'required' : '', 'type' : 'text', 'name' : 'name', 'id' : 'name', 'placeholder' : 'Nom'}}) }}
+            {{ form_widget(form.description, {'attr': {'class': 'input', 'required' : '', 'type' : 'text', 'name' : 'name', 'id' : 'name', 'placeholder' : 'Description'}}) }}
+            {{ form_widget(form.category, {'attr': {'class': 'input', 'required' : '', 'type' : 'text', 'name' : 'name', 'id' : 'name', 'placeholder' : 'Category'}}) }}
+            {{ form_widget(form.img1, {'attr': {'class': 'input file-input', 'required' : '', 'type' : 'img', 'name' : 'img1', 'id' : 'name', 'placeholder' : 'img1'}}) }}
+            {{ form_widget(form.img2, {'attr': {'class': 'input file-input', 'required' : '', 'type' : 'img', 'name' : 'img2', 'id' : 'name', 'placeholder' : 'img2'}}) }}
+            {{ form_widget(form.img3, {'attr': {'class': 'input file-input', 'required' : '', 'type' : 'img', 'name' : 'img3', 'id' : 'name', 'placeholder' : 'img3'}}) }}
+
+
+            <button type="submit" class="login-button">Enregistrer</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var fileInputs = document.querySelectorAll('.file-input');
+
+            fileInputs.forEach(function(fileInput) {
+                fileInput.removeAttribute('required');
+            });
+        });
+    </script>
+
+    
+{{ form_end(form) }}

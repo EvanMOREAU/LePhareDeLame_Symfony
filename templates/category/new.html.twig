@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Category{% endblock %}
+
+{% block body %}
+<link href="/assets/css/form.css" rel="stylesheet">
+
+    <h1>Créer une nouvelle catégorie</h1>
+
+    {{ include('category/_form.html.twig') }}
+
+    <a class="page-link" href="{{ path('app_category_index') }}">Retour à la liste</a>
+{% endblock %}

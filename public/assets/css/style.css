@@ -10,10 +10,18 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garantit que le corps prend au moins toute la hauteur de la vue (viewport height) */
 }
 
+#footer {
+  margin-top: auto; /* Place le pied de page en bas de la page */
+  width: 100%;
+  position: relative;
+}
 a {
   color: #ffc451;
   text-decoration: none;
@@ -406,7 +414,7 @@ h6 {
 #hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/hero-bg.png") top center;
+  background: url("../img/387875362_708411697986143_2957687025388561745_n.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -917,6 +925,7 @@ section {
 
 .portfolio-details .portfolio-description {
   padding-top: 30px;
+
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -927,7 +936,11 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  width: auto;
+  overflow-wrap: break-word; /* Permet le retour à la ligne en cas de débordement */
 }
+
+
 
 /*--------------------------------------------------------------
 # Counts
