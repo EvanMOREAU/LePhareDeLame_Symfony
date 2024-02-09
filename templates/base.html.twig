@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Le Phare de l'Ame{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {% block stylesheets %}
            <!-- Favicons -->
@@ -46,10 +46,9 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#about">Fonctionnement</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#avis">Avis</a></li>
+          <li><a class="nav-link scrollto " href="#info">Informations</a></li>
           <li class="dropdown"><a href="#"><span>Prestations</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               {% for category in categories %}
@@ -66,14 +65,35 @@
               {% endfor %}
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
           <li class="dropdown"><a href="#"><span>Administration</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 <li class="dropdown">
                   <a href="/category"><span>Catégories</span></a>
+                  <ul>
+                  <li><a class="dropdown" href="/category/new">Nouvelle catégorie</a></li>
+                  <li><a class="dropdown" href="/category">Index des catégorie</a></li>                   
+                  </ul>
                 </li>
                 <li class="dropdown">
                   <a href="/service"><span>Services</span></a>
+                  <ul>
+                    <li><a class="dropdown" href="/service/new">Nouveau service</a></li>
+                    <li><a class="dropdown" href="/service">Index des services</a></li>                   
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="/appointment"><span>Rendez-vous</span></a>
+                  <ul>
+                  <li><a class="dropdown" href="/appointment/new">Nouveau RDV</a></li>
+                  <li><a class="dropdown" href="/appointment">Index RDV</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="/avis/index"><span>Avis</span></a>
+                </li>
+                <li class="dropdown">
+                  <a href="/contact/index"><span>Contact</span></a>
                 </li>
             </ul>
           </li>
@@ -113,14 +133,14 @@
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/60c2166a.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/103a649d.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/EFT462Z5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/jkqzvdyhqz67845.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/Regressive2.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/9086759Fqf_page-0001.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/908zqdzqdv6759Fqf_page-0001.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/certif/908guykygturt6759Fqf_page-0001.jpg" class="img-fluid" alt=""></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -128,38 +148,6 @@
       </div>
     </section><!-- End Clients Section -->
 
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="image col-lg-6" style='background-image: url("/assets/img/features.jpg");' data-aos="fade-right"></div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-receipt"></i>
-              <h4>Commençons par :</h4>
-              <p>Établir ce qui pourrais poser problème dans votre quotidien</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-cube-alt"></i>
-              <h4>Ensuite : </h4>
-              <p>Déterminons une date pour un rendez-vous</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-images"></i>
-              <h4>Par la suite :</h4>
-              <p>Travaillons sur vos soucis</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-shield"></i>
-              <h4>À la fin :</h4>
-              <p>Soyez plus à l'aise dans votre vie de tous les jours.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Features Section -->
     {% if is_mobile %}
       <!-- ======= Services Section ======= -->
       <section id="services" class="services">
@@ -232,14 +220,14 @@
         <div class="text-center">
           <h3>Prendre rendez-vous</h3>
           <p> Cliquez sur le bouton ci-dessous pour prendre rendez-vous avec moi !</p>
-          <a class="cta-btn" href="#">Contacter</a>
+          <a class="cta-btn" href="/contact">Contacter</a>
         </div>
 
       </div>
     </section><!-- End Cta Section -->
   {% if not is_mobile %}
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="services" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -281,223 +269,94 @@
     </section><!-- End Portfolio Section -->
   {% endif %}
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
-          <div class="col-xl-7 ps-4 ps-lg-5 pe-4 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
-            <div class="content d-flex flex-column justify-content-center">
-              <h3>Quelques informations supplémentaires</h3>
-              <p>
-                  Le Phare de L'Âme c'est aussi : 
-              </p>
-              <div class="row">
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Avis</strong> clients disponibles sur ce site</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Séances</strong> réalisés</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-clock"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Ans</strong> d'expérience</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-award"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Réussites</strong> d'après les retours des clients</p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
+    
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    <section id="avis" class="testimonials">
       <div class="container" data-aos="zoom-in">
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
+          
+            {% for rating in ratings %}
+              {% if rating.published == true %}
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <img src="/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                    <h3>{{rating.getUser().firstName}}  {{rating.getUser().lastName}}</h3>
+                    <h4>{{rating.getService().name}}<br>{{rating.value}}/5</h4>
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        {{rating.text}}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+              {% endif %}
+            {% endfor %}
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
       </div>
     </section><!-- End Testimonials Section -->
+    <!-- ======= Counts Section ======= -->
+        <section id="info" class="counts bg-light">
+          <div class="container" data-aos="fade-up">
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container" data-aos="fade-up">
+            <div class="row no-gutters">
+              <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
+              <div class="col-xl-7 ps-4 ps-lg-5 pe-4 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
+                <div class="content d-flex flex-column justify-content-center">
+                  <h3>Quelques informations supplémentaires</h3>
+                  <p>
+                      Le Phare de L'Âme c'est aussi : 
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6 d-md-flex align-items-md-stretch">
+                      <div class="count-box">
+                        <i class="bi bi-emoji-smile"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ ratings | length }}" data-purecounter-duration="2" class="purecounter"></span>
+                        <p><strong>Avis</strong> clients disponibles sur ce site</p>
+                      </div>
+                    </div>
 
-        <div class="section-title">
-          <h2>Team</h2>
-          <p>Check our Team</p>
-        </div>
+                    <div class="col-md-6 d-md-flex align-items-md-stretch">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext"></i>
+                            {% set currentDate = "now" | date("Y-m-d") %}
+                            {% set pastAppointments = appointments | filter(appointment => appointment.date|date("Y-m-d") < currentDate) %}
+                            <span data-purecounter-start="0" data-purecounter-end="{{ pastAppointments | length + 300 }}" data-purecounter-duration="2" class="purecounter"></span>
+                            <p><strong>Séances</strong> réalisées depuis de début de l'application</p>
+                        </div>
+                    </div>
 
-        <div class="row">
+                    <div class="col-md-6 d-md-flex align-items-md-stretch">
+                      <div class="count-box">
+                        <i class="bi bi-clock"></i>
+                        {% set startDate = '2019-01-01' | date('Y-m-d') %}
+                        {% set currentDate = 'now' | date('Y-m-d') %}
+                        {% set numberOfYears = currentDate|date('Y') - startDate|date('Y') - (currentDate|date('m-d') < startDate|date('m-d') ? 1 : 0) %}
+                        <span data-purecounter-start="0" data-purecounter-end="{{ numberOfYears }}" data-purecounter-duration="4" class="purecounter"></span>
+                        <p><strong>Ans</strong> d'expérience</p>
+                      </div>
+                    </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="/assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="/assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                    <div class="col-md-6 d-md-flex align-items-md-stretch">
+                      <div class="count-box">
+                        <i class="bi bi-award"></i>
+                        {% set win = ratings | filter(rating => rating.value > 3) %}
+                        <span data-purecounter-start="0" data-purecounter-end="{{ win | length }}" data-purecounter-duration="4" class="purecounter"></span>
+                        <p><strong>Réussites</strong> d'après les retours des clients</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End .content-->
               </div>
             </div>
+
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="/assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
+        </section><!-- End Counts Section -->
   </main><!-- End #main -->
 
   
@@ -520,13 +379,6 @@
                 <strong>Téléphone:</strong> 06 87 61 90 26<br>
                 <strong>Email:</strong> celine.giron@yahoo.fr<br>
               </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
             </div>
           </div>
 
@@ -552,31 +404,11 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
 
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+    
   </footer><!-- End Footer -->  
         {% block javascripts %}
             <!-- Vendor JS Files -->

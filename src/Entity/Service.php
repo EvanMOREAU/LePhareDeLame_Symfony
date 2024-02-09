@@ -38,9 +38,13 @@ class Service
     #[ORM\ManyToMany(targetEntity: Appointment::class, mappedBy: 'service')]
     private Collection $appointments;
 
+    #[ORM\OneToMany(mappedBy: 'service', targetEntity: RatingService::class)]
+    private Collection $ratingServices;
+
     public function __construct()
     {
         $this->appointments = new ArrayCollection();
+        $this->ratingServices = new ArrayCollection();
     }
 
 
@@ -143,6 +147,36 @@ class Service
     {
         if ($this->appointments->removeElement($appointment)) {
             $appointment->removeService($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, RatingService>
+     */
+    public function getRatingServices(): Collection
+    {
+        return $this->ratingServices;
+    }
+
+    public function addRatingService(RatingService $ratingService): static
+    {
+        if (!$this->ratingServices->contains($ratingService)) {
+            $this->ratingServices->add($ratingService);
+            $ratingService->setService($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRatingService(RatingService $ratingService): static
+    {
+        if ($this->ratingServices->removeElement($ratingService)) {
+            // set the owning side to null (unless already changed)
+            if ($ratingService->getService() === $this) {
+                $ratingService->setService(null);
+            }
         }
 
         return $this;

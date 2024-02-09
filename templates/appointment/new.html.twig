@@ -1,11 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Appointment{% endblock %}
-
 {% block body %}
-    <h1>Create new Appointment</h1>
-<br><br><br>
+<br><br><br>    <link href="/assets/css/form.css" rel="stylesheet">
+
     {{ include('appointment/_form.html.twig') }}
 
-    <a href="{{ path('app_appointment_index') }}">back to list</a>
 {% endblock %}

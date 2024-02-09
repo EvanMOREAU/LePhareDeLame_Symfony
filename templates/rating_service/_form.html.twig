@@ -1,0 +1,27 @@
+{{ form_start(form) }}
+    <link href="/assets/css/form.css" rel="stylesheet">
+
+<div class="form-container">
+    <div class="heading">Avis</div>
+    <form class="form">
+        <div class="Rating Rating__large">
+            <div class="Rating_input">
+                {% for child in form.value %}
+                    {{ form_widget(child, { 'id': 'Rating' ~ child.vars.value }) }}
+                    <label for="Rating{{ child.vars.value }}"><div></div></label>
+                {% endfor %}
+            </div>
+        </div>
+            {{ form_widget(form.text, {'attr': {'class': 'input', 'required' : '', 'placeholder' : 'Commentaire'}}) }}
+            {{ form_widget(form.service, {'attr': {'class': 'input', 'required' : '', 'placeholder' : 'Service'}}) }}
+
+            <button type="submit" class="login-button">Enregistrer</button>
+    </form>
+</div>
+{{ form_end(form) }}
+
+    {# <div class="form-container">
+        <div class="heading">Catégorie</div>
+        <form class="form">
+            {{ form_widget(form.name, {'attr': {'class': 'input', 'required' : '', 'type' : 'text', 'name' : 'name', 'id' : 'name', 'placeholder' : 'name'}}) }}
+            <a class="page-link" href="{{ path('app_category_index') }}">Retour à la liste</a> #}

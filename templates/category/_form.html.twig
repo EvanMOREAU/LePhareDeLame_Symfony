@@ -8,6 +8,7 @@
         <form class="form">
             {{ form_widget(form.name, {'attr': {'class': 'input', 'required' : '', 'type' : 'text', 'name' : 'name', 'id' : 'name', 'placeholder' : 'name'}}) }}
             <button type="submit" class="login-button">Enregistrer</button>
+            <a class="page-link" href="{{ path('app_category_index') }}">Retour à la liste</a>
         </form>
     </div>
 

@@ -1003,7 +1003,7 @@ section {
 }
 
 .counts .image {
-  background: url("../img/counts-img.jpg") center center no-repeat;
+  background: url("/assets/img/Logo_Evan_blanc.jpeg-removebg-preview.png") center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }

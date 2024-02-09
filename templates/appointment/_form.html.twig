@@ -1,4 +1,16 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_widget(form._token) }}
+    <div class="form-container">
+        <div class="heading">Rendez-vous</div>
+        <form class="form">
+            {{ form_widget(form.date, {'attr': {'class' : 'form-control'}}) }}<br>
+            {{ form_widget(form.user, {'attr': {'class' : 'form-control'}}) }}<br>
+            {{ form_widget(form.service, {'attr': {'class' : 'form-control'}}) }}<br>
+            {{ form_widget(form.pdf, {'attr': {'class' : 'form-control'}}) }}
+
+            <button type="submit" class="login-button">Enregistrer</button>
+            <a class="login-button text-center" href="{{ path('app_appointment_index') }}">Retour à la liste</a>
+        </form>
+    </div>
 {{ form_end(form) }}
+

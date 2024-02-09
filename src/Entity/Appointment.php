@@ -25,6 +25,9 @@ class Appointment
     #[ORM\ManyToMany(targetEntity: Service::class, inversedBy: 'appointments')]
     private Collection $service;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $pdf = null;
+
     public function __construct()
     {
         $this->service = new ArrayCollection();
@@ -79,6 +82,18 @@ class Appointment
     public function removeService(Service $service): static
     {
         $this->service->removeElement($service);
+
+        return $this;
+    }
+
+    public function getPdf(): ?string
+    {
+        return $this->pdf;
+    }
+
+    public function setPdf(?string $pdf): static
+    {
+        $this->pdf = $pdf;
 
         return $this;
     }

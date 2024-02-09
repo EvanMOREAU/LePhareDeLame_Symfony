@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+            <link href="/assets/css/card.css" rel="stylesheet">
+<br><br><br>
+    <div class="card-container">
+        {% for contact in contacts %}
+            <div class="card">
+                <span class="small-text">{{ contact.email }}</span>
+                <span class="title">{{ contact.subject }}</span>
+                <span class="desc">{{ contact.message }}</span>
+                <hr>
+                <span class="desc">{{ contact.name }}<br>{{ contact.date ? contact.date|date('d/m/Y') : '' }}<br>ID {{ contact.id }}</span>
+                <form method="post" action="{{ path('app_contact_delete', {'id': contact.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ contact.id) }}">
+                    <button class="btn btn-danger">Supprimer</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
